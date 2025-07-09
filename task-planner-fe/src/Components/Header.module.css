@@ -1,0 +1,34 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #6B4C3B; 
+    min-height:4rem;
+}
+.leftContainer{
+    flex: 1 1 200px;
+    padding-left: 1rem;
+}
+.projectTitle{
+    font-size: clamp(1rem,28px,2.5rem);
+    font-weight:600;
+    color:#fff;
+}
+.rightContainer{
+    flex: 1 1 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1rem;
+    padding-right: 1rem;
+}
+.userAvatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #ccc; 
+}
