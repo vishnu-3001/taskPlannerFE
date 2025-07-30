@@ -1,0 +1,15 @@
+.text{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color:black;
+    width: 90%;
+}
+.textInput{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color:black;
+    width:90%;
+    height:3rem;
+    background-color: transparent;
+    border:none;
+}

@@ -1,0 +1,20 @@
+.cardExpandedContainer{
+    width:clamp(50rem,55rem,65rem);
+    height:auto;
+    border: 1px solid black;
+}
+.innerCardExpandedContainer{
+    margin:1rem;
+}
+.datesContainer{
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
+}
+.descriptionContainer{
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}

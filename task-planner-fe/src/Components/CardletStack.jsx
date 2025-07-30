@@ -1,14 +1,21 @@
 import classes from "./cardletStack.module.css";
 import Cardlet from "./Cardlet";
-import tasks from "../Utils/tasks"
+import tasks from "../Utils/tasks";
+import { useNavigate } from "react-router-dom";
 export default function CardletStack(){
-    return(
-        <div className={classes.cardletContainer}>
-            {
-                tasks.map((task,index)=>{
-                    return <Cardlet task={task} key={index}></Cardlet>
-                })
-            }
-        </div>
-    )
+  const navigate=useNavigate();
+    function handleClick(){
+      navigate("/card/1");
+    }
+    return (
+      <div className={classes.cardletContainer}>
+        {tasks.map((task, i) => (
+          <Cardlet
+            key={i}
+            task={task}
+            onClick={handleClick}
+          />
+        ))}
+      </div>
+    );
 }

@@ -1,0 +1,16 @@
+.descriptionContainer{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.label{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:black;
+}
+.editDescriptionContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
