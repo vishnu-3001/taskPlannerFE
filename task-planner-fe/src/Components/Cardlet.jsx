@@ -1,7 +1,7 @@
 import classes from "./Cardlet.module.css";
-export default function Cardlet({task}){
+export default function Cardlet({task , onClick}){
     return(
-        <div className={classes.cardLetContainer}>
+        <div className={classes.cardLetContainer} onClick={onClick}>
             <div className={classes.innerCard}>
                 <div className={classes.TitleLine}>
                     <p className={classes.title}>{task.title}</p>

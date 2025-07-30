@@ -1,0 +1,8 @@
+.dateContainer{
+    width:clamp(12rem,15rem,20rem);
+}
+.dateNoEditContainer{
+    display: flex;
+    flex-direction: row;
+    gap:0.4rem;
+}
