@@ -1,8 +1,8 @@
 import classes from "./cardletStack.module.css";
 import Cardlet from "./Cardlet";
-import tasks from "../Utils/tasks";
+// import tasks from "../Utils/tasks";
 import { useNavigate } from "react-router-dom";
-export default function CardletStack(){
+export default function CardletStack({tasks}){
   const navigate=useNavigate();
     function handleClick(){
       navigate("/card/1");
