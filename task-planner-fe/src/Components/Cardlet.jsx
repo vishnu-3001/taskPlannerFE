@@ -1,4 +1,6 @@
 import classes from "./Cardlet.module.css";
+import { statusEnum,priorityEnum } from "../Utils/enums";
+import { Tooltip } from "react-tooltip";
 export default function Cardlet({task , onClick}){
     return(
         <div className={classes.cardLetContainer} onClick={onClick}>
@@ -13,8 +15,13 @@ export default function Cardlet({task , onClick}){
                 <div className={classes.detailsContainer}>
                     <div className={classes.leftDetails}>
                         <div className={classes.epicDetails}>
-                            {/* <img>{task.statusIcon}</img> */}
-                            <p>{task.taskPriority}</p>
+                            <p 
+                            id="priority"
+                            data-tooltip-content={task?.taskPriority}
+                            data-tooltip-place="top"
+                            data-tooltip-variant="dark"
+                            >{priorityEnum[task?.taskPriority]}</p>
+                            <Tooltip anchorSelect="#priority"></Tooltip>
                             <a href={task.taskEpic}>{task.taskEpic}</a>
                         </div>
                     </div>
@@ -24,9 +31,13 @@ export default function Cardlet({task , onClick}){
                                 <p>{task.taskPoints}</p>
                             </div>
                             <div>
-                                <p>{task.taskStatus}</p>
-                                {/* <img alt="priority">{task.priorityIcon}</img> */}
-                                {/* <img alt="userAvatar">{task.userAvatar}</img> */}
+                                <p
+                                id="status"
+                                data-tooltip-content={task?.taskStatus}
+                                data-tooltip-place="top"
+                                data-tooltip-variant="dark"
+                                >{statusEnum[task?.taskStatus]}</p>
+                                <Tooltip anchorSelect="#status"></Tooltip>
                             </div>
                         </div>
                     </div>

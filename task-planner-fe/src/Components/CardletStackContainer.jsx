@@ -18,13 +18,21 @@ export default function CardletStackContainer(){
         return <p>Error: {error}</p>
     }
     if(status==="success"){
-        console.log(cardlets);
+        // console.log(cardlets);
     }
     return(
         <div className={classes.cardletStackContainer}>
-            <CardletStack tasks={cardlets} key="1"/>
-            {/* <CardletStack key="2" />
-            <CardletStack key="3" /> */}
+            {
+                Object.keys(cardlets).map((key)=>{
+                    return (
+                        <CardletStack 
+                            key={key}
+                            status={key} 
+                            tasks={cardlets[key]} 
+                        />
+                    )
+                })
+            }
         </div>
     )
 }
